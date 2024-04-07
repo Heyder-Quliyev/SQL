@@ -26,13 +26,22 @@ Values
 ('Tomato Sauce', 1.29),
 ('Tuna', 10.89);
  select*from Praducts
- drop table Praducts
+
+ select*from Praducts where price > 10
+
+ select*from Praducts where LEN(Brand) > 5
+
+ select CONCAT(Name,' ', Brand) as 'Product' from Praducts
 
  Alter table Praducts
- Add Brand nvarchar (100)
+ Add Brand nvarchar (100) 
+ --Default 'Kraft Heinz'
 
 Select Price from Praducts
 Where Price > (Select AVG(Price) From Praducts)
 
 select Price from Praducts
 Where Price < (Select AVG(Price) From Praducts)
+
+
+ drop table Praducts
